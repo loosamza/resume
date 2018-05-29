@@ -2,6 +2,8 @@
 
 var path = require('path');
 var gulp = require('gulp');
+var babel = require('gulp-babel')
+var uglify = require('gulp-uglify');
 var conf = require('./conf');
 
 var browserSync = require('browser-sync');
@@ -20,7 +22,11 @@ gulp.task('scripts', function() {
 
 function buildScripts() {
   return gulp.src(path.join(conf.paths.src, '/app/**/*.js'))
-    .pipe($.eslint())
-    .pipe($.eslint.format())
-    .pipe($.size())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(uglify())
+    // .pipe($.eslint())
+    // .pipe($.eslint.format())
+    // .pipe($.size())
 };

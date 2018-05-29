@@ -4,7 +4,9 @@
   var app = angular
     .module('myApp', ['ngRoute']);
 
-  app.controller('myController', ['$scope', '$timeout', '$sce', function($scope, $timeout, $sce) {
+
+
+  app.controller('AppController', ['$scope', '$timeout', function($scope, $timeout) {
     console.log('controller call')
     $scope.birthdate = 778179600000;
     var strArray = ['Communication', 'Self-Motivation', 'Responsibility', 'Flexibility', 'Ability to Work Under Pressure and Time Management'];

@@ -44,7 +44,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(jsFilter)
     .pipe($.sourcemaps.init())
     .pipe($.ngAnnotate())
-    .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
+    //.pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
     .pipe($.rev())
     .pipe($.sourcemaps.write('maps'))
     .pipe(jsFilter.restore)
@@ -73,7 +73,7 @@ gulp.task('fonts', function () {
   return gulp.src($.mainBowerFiles())
     .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
     .pipe($.flatten())
-    .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
+    .pipe(gulp.dest(path.join(conf.paths.dist, '/webfonts/')));
 });
 
 gulp.task('other', function () {
