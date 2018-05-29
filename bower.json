@@ -1,0 +1,41 @@
+{
+  "name": "piyapatResume",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-sanitize": "~1.5.3",
+    "angular": "^1.7.0",
+    "bulma": "^0.7.1",
+    "bulma-timeline": "^2.0.3",
+    "bulma-accordion": "^1.0.1",
+    "components-font-awesome": "^5.0.6",
+    "typeit": "^5.10.1",
+    "angular-route": "^1.7.0"
+  },
+  "overrides": {
+    "bulma": {
+      "main": [
+        "css/bulma.css"
+      ]
+    },
+    "bulma-accordion": {
+      "main": [
+        "dist/bulma-accordion.js",
+        "dist/bulma-accordion.sass",
+        "dist/bulma-accordion.min.css"
+      ]
+    },
+    "bulma-timeline":{
+      "main":[
+        "dist/bulma-timeline.min.css"
+      ]
+    },
+    "typeit": {
+      "main": [
+        "dist/typeit.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.3"
+  }
+}
