@@ -3,5 +3,6 @@ bower_components/
 coverage/
 .sass-cache/
 .idea/
+dist
 .tmp/
 package-lock.json
